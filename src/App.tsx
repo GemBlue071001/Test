@@ -8,14 +8,14 @@ import {
 } from 'firebase/auth'
 import './App.css'
 import { auth } from './firestore-config'
+import { Products } from './User/component/Products'
 
 function App() {
   return (
     <div>
-      <h1></h1>
+      <Products />
     </div>
   )
-  
 }
 
 export default App
