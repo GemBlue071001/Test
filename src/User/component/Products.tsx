@@ -9,7 +9,7 @@ export function Products() {
   useEffect(() => {
     const getItems = async () => {
       const data = await getDocs(itemCollectionRef)
-      var tmpItems = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+      var tmpItems: any = data.docs.map((doc) => ({ ...doc.data(), id: doc.id })) 
 
       for (var item of tmpItems) {
         console.log('GET IMAGE FOR ' + item.name)

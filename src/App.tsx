@@ -1,21 +1,29 @@
-import React from 'react'
-import { useState } from 'react'
+import React from "react";
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
-} from 'firebase/auth'
-import './App.css'
-import { auth } from './firestore-config'
+} from "firebase/auth";
+import "./App.css";
+import { auth } from "./firestore-config";
+import Login from "./pages/Login/Login";
+import SignUp from "./pages/SignUp/SignUp";
 
 function App() {
   return (
-    <div>
-      <h1></h1>
-    </div>
-  )
-  
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
