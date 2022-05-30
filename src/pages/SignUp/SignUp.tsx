@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./SignUp.css";
+import React, { useState } from 'react'
+// import { Link } from "react-router-dom";
+import './SignUp.css'
 
 export default function SignUp(): any {
   const [name, setName] = useState('')
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
     console.log(username)
     console.log(password)
-    setUsername("")
-    setPassword("")
-    setName("")
-  };
+    setUsername('')
+    setPassword('')
+    setName('')
+  }
 
   return (
     <div className="wrap-container">
@@ -48,11 +48,9 @@ export default function SignUp(): any {
           />
           <br />
           <button>Sign up</button>
-          <div>
-            Have an account, <Link to="/">Sign in</Link> here
-          </div>
+          <div>{/* Have an account, <Link to="/">Sign in</Link> here */}</div>
         </div>
       </form>
     </div>
-  );
+  )
 }

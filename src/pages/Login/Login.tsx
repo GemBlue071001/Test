@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Login.css";
+import React, { useState } from 'react'
+// import { Link } from 'react-router-dom'
+import './Login.css'
 
 export default function Login(): any {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
   const handleSubmit = (e: any) => {
-    e.preventDefault();
-    console.log(username);
-    console.log(password);
-    setUsername("");
-    setPassword("");
-  };
+    e.preventDefault()
+    console.log(username)
+    console.log(password)
+    setUsername('')
+    setPassword('')
+  }
 
   return (
     <div className="wrap-container">
@@ -40,11 +40,9 @@ export default function Login(): any {
           />
           <br />
           <button>Sign in</button>
-          <div>
-            No account, <Link to="/signup">Sign Up</Link> here
-          </div>
+          <div>{/* No account, <Link to="/signup">Sign Up</Link> here */}</div>
         </div>
       </form>
     </div>
-  );
+  )
 }
